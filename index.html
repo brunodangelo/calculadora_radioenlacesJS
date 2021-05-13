@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Radios de Fresnel y RadioEnlaces</title>
+<link type="text/css" href="estilo.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+<body onload="init();">
+  <table class="radiosfresnel">
+    <tr>
+      <td><span>Frecuencia de operación:</span></td>  <td><input type="number" id="frecuencia" /></td><td><span>[MHz]</span></td>
+    </tr>
+    <tr>
+      <td><span>Distancia del Radioenlace:</span></td> <td><input type="number" id="distancia" /></td><td><span>[km]</span></td>
+    </tr>
+    <tr>
+      <td><span>Distancia al obstáculo:</span></td><td><input type="number" id="distancia1" /></td><td><span>[km]</span></td>
+    </tr>
+    <tr>
+      <td><span>Número de radio:</span></td><td><select id="ene"><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+    </tr>
+    <tr>
+      <td><span>Factor k:</span></td><td><select id="factork"><option value="0.67">2/3</option><option value="1">1</option><option value="1.33">4/3</option><option value="3" selected>No Considerar</option></select></td>
+    </tr>
+    <tr>
+      <td><span>Altura del obstáculo:</span></td><td><input type="number" id="alturaobs" value="0"/></td><td><span>[m]</span></td>
+    </tr>
+    <tr>
+      <td><button id="calcular">Calcular</button></td><td><button id="limpiar">Limpiar</button></td>
+    </tr>
+  </table>
+  <table class="resultados">
+    <tr>
+      <td colspan="4"><span id="tituloresultado1"></span></td>
+    </tr>
+    <tr>
+      <td colspan="4"><span id="resultado1"></span></td>
+    </tr>
+    <tr>
+      <td colspan="4"><span id="tituloresultado2"></span></td>
+    </tr>
+    <tr>
+      <td colspan="4"><span id="resultado2"></span></td>
+    </tr>
+  </table>
+<script src="javascript.js"></script>
+</body>
+</html>
